@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-title>Lucro por Produto</mat-card-title>
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Escolha um produto</mat-label>
+      <input type="text"
+             placeholder="Escolha uma opção"
+             aria-label="Descricão"
+             matInput
+             [formControl]="myControl"
+             [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected()">
+        <mat-option *ngFor="let option of options" [value]="option.descricao">
+          {{option.descricao}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+  <div class="grafico">
+    <div id="bar_chart2"></div>
+  </div>
+</mat-card>

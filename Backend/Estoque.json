@@ -1,0 +1,202 @@
+{
+  "Produtos": [
+    {
+      "id": 1,
+      "descricao": "tv tela plana",
+      "tipoProduto": "Eletrônico",
+      "valorFornecedor": 4000,
+      "quantidade": 97
+    },
+    {
+      "id": 2,
+      "descricao": "Sofa 3 lugares",
+      "tipoProduto": "movel",
+      "valorFornecedor": 900,
+      "quantidade": 90
+    },
+    {
+      "id": 4,
+      "descricao": "notebook Dell",
+      "tipoProduto": "Eletronico",
+      "valorFornecedor": 5000,
+      "quantidade": 3
+    },
+    {
+      "id": 6,
+      "descricao": "controle PS4",
+      "tipoProduto": "Eletronico",
+      "valorFornecedor": 500,
+      "quantidade": 35
+    },
+    {
+      "id": 7,
+      "descricao": "Geladeira",
+      "tipoProduto": "Eletrodomestico",
+      "valorFornecedor": 2000,
+      "quantidade": 100
+    },
+    {
+      "id": 8,
+      "descricao": "fone de ouvido",
+      "tipoProduto": "Eletronico",
+      "valorFornecedor": 50,
+      "quantidade": 10
+    }
+  ],
+  "MovEstoque": [
+    {
+      "id": 1,
+      "produto": {
+        "id": 1,
+        "descricao": "tv tela plana",
+        "tipoProduto": "Eletronico",
+        "valorFornecedor": 4000,
+        "quantidade": 100
+      },
+      "tipoMovimentacao": "Entrada",
+      "valorVenda": 0,
+      "dataVenda": "01/10/2021",
+      "quantidadeMov": 3
+    },
+    {
+      "produto": {
+        "id": 2,
+        "descricao": "controle PS4",
+        "tipoProduto": "Eletronico",
+        "valorFornecedor": 500,
+        "quantidade": 30
+      },
+      "tipoMov": "Entrada",
+      "valorVenda": 0,
+      "dataVenda": "2021-10-06T13:39:11.887Z",
+      "quantidadeMov": 0,
+      "id": 2
+    },
+     {
+      "produto": {
+        "id": 3,
+        "descricao": "notebook Dell",
+        "tipoProduto": "Eletronico",
+        "valorFornecedor": 5000,
+        "quantidade": 500
+      },
+      "tipoMov": "Entrada",
+      "valorVenda": 0,
+      "dataVenda": "2021-10-06T18:59:19.317Z",
+      "quantidadeMov": 500,
+      "id": 3
+    },
+    {
+      "produto": {
+        "id": 4,
+        "descricao": "notebook Dell",
+        "tipoProduto": "Eletronico",
+        "valorFornecedor": 5000,
+        "quantidade": 498
+      },
+      "tipoMov": "Saída",
+      "valorVenda": 10000,
+      "dataVenda": "2021-10-06T18:18:19.033Z",
+      "quantidadeMov": 2,
+      "id": 4
+    },
+    {
+      "produto": {
+        "id": 5,
+        "descricao": "tv tela plana",
+        "tipoProduto": "Eletronico",
+        "valorFornecedor": 4000,
+        "quantidade": 97
+      },
+      "tipoMov": "Saída",
+      "valorVenda": 10000,
+      "dataVenda": "2021-10-06T18:47:24.423Z",
+      "quantidadeMov": 3,
+      "id": 5
+    },
+    {
+      "produto": {
+        "id": 6,
+        "descricao": "notebook Dell",
+        "tipoProduto": "Eletronico",
+        "valorFornecedor": 5000,
+        "quantidade": 493
+      },
+      "tipoMov": "Saída",
+      "valorVenda": 20000,
+      "dataVenda": "2021-10-06T18:53:29.426Z",
+      "quantidadeMov": 5,
+      "id": 6
+    },
+    {
+      "produto": {
+        "id": 7,
+        "descricao": "notebook Dell",
+        "tipoProduto": "Eletronico",
+        "valorFornecedor": 5000,
+        "quantidade": 3
+      },
+      "tipoMov": "Saída",
+      "valorVenda": 1000000000,
+      "dataVenda": "2021-10-06T18:59:19.317Z",
+      "quantidadeMov": 490,
+      "id": 7
+    },
+    {
+      "produto": {
+        "id": 8,
+        "descricao": "Sofa 3 lugares",
+        "tipoProduto": "Movel",
+        "valorFornecedor": 900,
+        "quantidade": 90
+      },
+      "tipoMov": "Entrada",
+      "valorVenda": 0,
+      "dataVenda": "2021-10-07T12:40:10.644Z",
+      "quantidadeMov": 40,
+      "id": 8
+    },
+    {
+      "produto": {
+        "id": 9,
+        "descricao": "controle PS4",
+        "tipoProduto": "Eletronico",
+        "valorFornecedor": 500,
+        "quantidade": 35
+      },
+      "tipoMov": "Entrada",
+      "valorVenda": 0,
+      "dataVenda": "2021-10-07T12:41:54.185Z",
+      "quantidadeMov": 5,
+      "id": 9
+    },
+    {
+      "produto": {
+        "id": 10,
+        "descricao": "Geladeira",
+        "tipoProduto": "Eletrodomestico",
+        "valorFornecedor": 2000,
+        "quantidade": 100
+      },
+      "tipoMov": "Entrada",
+      "valorVenda": 0,
+      "dataVenda": "2021-10-08T12:11:35.167Z",
+      "quantidadeMov": 0,
+      "id": 10
+    },
+    {
+      "produto": {
+        "id": 11,
+        "descricao": "fone de ouvido",
+        "tipoProduto": "Eletronico",
+        "valorFornecedor": 50,
+        "quantidade": 10
+      },
+      "tipoMov": "Entrada",
+      "valorVenda": 0,
+      "dataVenda": "2021-10-08T12:12:19.388Z",
+      "quantidadeMov": 0,
+      "id": 11
+    }
+  ]
+}

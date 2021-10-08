@@ -1,0 +1,25 @@
+mat-card{
+    margin-left: 20px;
+    width: 95%;
+}
+mat-card-title{
+  margin: 20px 5px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+button{
+    margin: 20px 15px 0px 0px;
+    border-radius: 8px;
+    width: 100px;
+    text-align: center;
+}
+
+button:hover{
+    padding: 2px;
+}

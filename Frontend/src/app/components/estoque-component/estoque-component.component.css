@@ -1,0 +1,33 @@
+mat-card{
+  margin-top: 40px;
+  margin-left: 20px;
+  width: 95%;
+
+}
+
+
+mat-card-title{
+margin: 20px 5px;
+display: flex;
+align-items: left !important;
+}
+
+
+form{
+  display: flex;
+  align-items: left !important;
+  flex-direction: column;
+}
+
+
+
+#bar_chart2{
+  width: 70%;
+}
+
+.grafico{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+

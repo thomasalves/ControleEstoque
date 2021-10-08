@@ -1,0 +1,29 @@
+mat-card {
+  margin: 30px;
+  width: 95%;
+}
+
+.example-form {
+
+  width: 90vw;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.example-full-width {
+  width: 100%;
+  margin: 15px;
+
+}
+
+button {
+  margin: 20px 15px 0px 0px;
+  border-radius: 8px;
+  width: 100px;
+  text-align: center;
+}
+
+button:hover{
+  padding: 2px;
+}

@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-title>Consulta por tipo de Produto</mat-card-title>
+  <form class="example-form">
+    <mat-form-field appearance="fill">
+      <mat-label>Tipo do produto</mat-label>
+      <mat-select [(ngModel)]="tipo" name="tipoProduto" (selectionChange)="selected()">
+        <mat-option *ngFor="let tipo of tipoProduto" [value]="tipo.value">
+          {{tipo.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+  <div id="bar_chart"></div>
+</mat-card>

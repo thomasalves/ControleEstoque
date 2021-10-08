@@ -1,0 +1,40 @@
+<mat-card>
+  <mat-card-title>Novo Produto</mat-card-title>
+    <form class="example-form">
+      <!-- <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Código</mat-label>
+        <input matInput type="number" [(ngModel)]= "novoProduto.id"  name="codigo">
+      </mat-form-field> -->
+
+      <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Descrição</mat-label>
+          <input matInput   [(ngModel)]= "novoProduto.descricao" name="descricao">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Tipo do produto</mat-label>
+        <mat-select [(ngModel)]="novoProduto.tipoProduto" name="tipoProduto">
+          <mat-option *ngFor="let tipo of tipoProduto" [value]="tipo.value">
+            {{tipo.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Valor Fornecedor</mat-label>
+        <input matInput type="number" placeholder="Valor do Fornecedor" [(ngModel)]= "novoProduto.valorFornecedor" name="Valor do Produto" >
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Quantidade</mat-label>
+        <input matInput  type="number"  [(ngModel)]= "novoProduto.quantidade" name="Qauntidade" >
+      </mat-form-field>
+    </form>
+  <button mat-raised-button (click)="createProduto()" color="primary">
+    Salvar
+  </button>
+  <button mat-raised-button (click)="cancel()" color="primary">
+    Cancelar
+  </button>
+
+</mat-card>
