@@ -10,11 +10,10 @@ import { MovEstoque, MovEstoqueService, Produtos, ProdutosService } from '../sha
 })
 export class EditarProdutoComponent implements OnInit {
 
-  myControl = new FormControl();
+  formAnswers = new FormControl();
   options: Produtos[] = [];
   quantidade!: number;
   venda!: number;
-
 
   constructor(
      private produtosService: ProdutosService,
@@ -29,7 +28,7 @@ export class EditarProdutoComponent implements OnInit {
 
   saidaProduto() :void {
     this.options.forEach(opt => {
-      if(opt.descricao == this.myControl.value){
+      if(opt.descricao == this.formAnswers.value){
         let atualizarProduto: Produtos = {
           id: opt.id ,
           descricao: opt.descricao,
@@ -54,8 +53,6 @@ export class EditarProdutoComponent implements OnInit {
 
     })
   }
-
-
   cancel(): void {
     this.router.navigate(['/'])
   }

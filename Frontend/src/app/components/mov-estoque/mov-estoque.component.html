@@ -3,7 +3,7 @@
   <form class="example-form">
     <mat-form-field appearance="fill">
       <mat-label>Tipo do produto</mat-label>
-      <mat-select [(ngModel)]="tipo" name="tipoProduto" (selectionChange)="selected()">
+      <mat-select [(ngModel)]="tipo" name="tipoProduto" (selectionChange)="selectedTipoProduto()">
         <mat-option *ngFor="let tipo of tipoProduto" [value]="tipo.value">
           {{tipo.viewValue}}
         </mat-option>

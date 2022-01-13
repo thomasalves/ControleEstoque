@@ -7,7 +7,7 @@
              placeholder="Escolha uma opção"
              aria-label="Descricão"
              matInput
-             [formControl]="myControl"
+             [formControl]="formAnswers"
              [matAutocomplete]="auto">
       <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected()">
         <mat-option *ngFor="let option of options" [value]="option.descricao">
@@ -17,6 +17,6 @@
     </mat-form-field>
   </form>
   <div class="grafico">
-    <div id="bar_chart2"></div>
+    <div id="barChartTipoProduto"></div>
   </div>
 </mat-card>

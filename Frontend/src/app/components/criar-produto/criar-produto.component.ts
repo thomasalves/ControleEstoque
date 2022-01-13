@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Produtos, MovEstoque, ProdutosService, MovEstoqueService } from '../shared';
+import { Produtos, MovEstoque, ProdutosService, MovEstoqueService, tipoProduto  } from '../shared';
 import { Router } from '@angular/router';
-
-interface tipoProduto {
-  value: string;
-  viewValue: string;
-}
-
 @Component({
   selector: 'app-criar-produto',
   templateUrl: './criar-produto.component.html',
@@ -30,35 +24,29 @@ export class CriarProdutoComponent implements OnInit {
     quantidadeMov: this.novoProduto.quantidade
   }
 
-  constructor(private produtosService: ProdutosService,
-    private router: Router, private movEstoqueService: MovEstoqueService) { }
-
-  ngOnInit(): void {
-
-  }
-
   tipoProduto: tipoProduto[] = [
     {value: 'Eletronico', viewValue: 'Eletrônico'},
     {value: 'Eletrodomestico', viewValue: 'Eletrodoméstico'},
     {value: 'Movel', viewValue: 'Móvel'}
   ];
 
+  constructor(private produtosService: ProdutosService,
+    private router: Router, private movEstoqueService: MovEstoqueService) { }
+
+  ngOnInit(): void {}
+
+
   createProduto(): void {
     console.log(this.novoProduto)
     this.produtosService.create(this.novoProduto).subscribe(() => {
       this.createMovimentacao();
-      // this.router.navigate(['/filmes'])
-
     })
 
   }
   createMovimentacao(): void {
     console.log(this.EntradaProduto)
     this.movEstoqueService.create(this.EntradaProduto).subscribe(() => {
-
       this.movEstoqueService.showMessage('Produto adicionado')
-      // this.router.navigate(['/filmes'])
-
     })
   }
 

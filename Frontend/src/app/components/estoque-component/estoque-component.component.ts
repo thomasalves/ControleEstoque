@@ -11,7 +11,6 @@ declare var google: any;
 })
 export class EstoqueComponentComponent implements OnInit {
 
-  tipo!: string;
   venda: number = 0;
   compra: number = 0;
   lucro: number = 0;
@@ -19,9 +18,7 @@ export class EstoqueComponentComponent implements OnInit {
   options: Produtos[] = []
   lucroMov : Array<{}> = []
   quantidade: number = 0;
-  myControl = new FormControl();
-
-
+  formAnswers = new FormControl();
 
   constructor(private movEstoqueServoce: MovEstoqueService, private produtoService: ProdutosService) { }
 
@@ -38,8 +35,6 @@ export class EstoqueComponentComponent implements OnInit {
     if(typeof(google) !== 'undefined'){
       google.charts.load('current', { 'packages' : ['bar']});
     }
-
-
   }
 
   selected(): void {
@@ -53,29 +48,24 @@ export class EstoqueComponentComponent implements OnInit {
     let colums = ["Produto", "Lucro", "Saida", ];
     this.lucroMov.push(colums)
     this.movEstoque.forEach(i => {
-      if (i.produto.descricao === this.myControl.value){
+      if (i.produto.descricao === this.formAnswers.value){
         if(i.tipoMov === 'Saída'){
           this.venda =  i.valorVenda + this.venda;
           this.quantidade =  i.quantidadeMov + this.quantidade
-          // console.log('io', i)
         } else {
-          // console.log('io', i)
           this.compra = this.compra + i.produto.valorFornecedor
         }
-        // this.compra = i.produto.valorFornecedor;
       }
     })
     this.lucro = this.venda - this.compra
-    console.log(this.lucro, this.quantidade)
-    this.lucroMov.push([this.myControl.value.toUpperCase() , this.lucro, this.quantidade]);
-    console.log(this.lucroMov)
+    this.lucroMov.push([this.formAnswers.value.toUpperCase() , this.lucro, this.quantidade]);
     setTimeout(() => {
       google.charts.setOnLoadCallback(this.exibirBarChart());
     }, 1000);
   }
 
   exibirBarChart(): void {
-    const el = document.getElementById('bar_chart2');
+    const el = document.getElementById('barChartTipoProduto');
     const chart =  new google.charts.Bar(el);
 
     chart.draw(this.obterDataTable(), this.obterOpcoes())
