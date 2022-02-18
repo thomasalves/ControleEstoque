@@ -11,23 +11,19 @@ Este projeto foi desenvolvido utilizando um framework Angular, desenvolvido pela
  ● Consulta de produtos por tipo, com quantidade de saída e quantidade disponível;
 
  ● Consulta de lucro por produto, exibindo a quantidade total de saída, e total do lucro (valorde venda – valor do fornecedor).
-
-
-
 # Backend
 
   Para simular as enditades e as movimentações da CRUD, foi desenvolvido uma API Fake, utlizando a biblioteca JsonServer, você pode ter acesso a mesma na pasta de backend neste retositorio
 
-  Para iniciar o serviço basta seguir os seguintes comandos apos clonar o repositorio
+  Para iniciar o serviço basta seguir os seguintes comandos apos clonar o repositorio e navegar pra pasta backend, siga os seguintes comandos:
       
    para baixar as dependencias:  
 
-      yarn ou npm install
+    yarn ou npm install
 
   Após basta iniciar o serviço
 
     yarn start
-
 
 # FrontEnd
 
